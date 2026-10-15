@@ -38,4 +38,4 @@ Le site est ensuite disponible sur http://localhost:3000.
 
 ## Déploiement
 
-Le plus simple est de déployer sur [Vercel](https://vercel.com/) en important le dépôt GitHub.
+Le site est hébergé sur [Netlify](https://www.netlify.com/) : importer le dépôt GitHub dans Netlify, qui détecte Next.js automatiquement.
