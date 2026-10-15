@@ -3,16 +3,15 @@
 import { FormEvent, useState } from 'react'
 import {
   ArrowRight,
-  Check,
+  ArrowUp,
+  ArrowUpRight,
+  Clock,
   Code2,
-  GitBranch,
-  Globe2,
-  BriefcaseBusiness,
+  FileText,
   Mail,
-  Linkedin,
+  MapPin,
   Menu,
   Send,
-  Sparkles,
   X,
 } from 'lucide-react'
 
@@ -39,6 +38,20 @@ const faqs = [
 ]
 
 const skills = ['React', 'Next.js', 'TypeScript', 'Symfony', 'ASP.NET / C#', 'Node.js', 'Docker', 'CI/CD']
+
+const footerLinks = [
+  ['Services', '#services'],
+  ['Réalisations', '#realisations'],
+  ['FAQ', '#faq'],
+  ['Contact', '#contact'],
+]
+
+const socials = [
+  { label: 'Malt', href: '#' },
+  { label: 'Codeur.com', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/Nassim84' },
+  { label: 'LinkedIn', href: '#' },
+]
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -87,11 +100,44 @@ export default function Page() {
 
       <section id="faq" className="mx-auto max-w-7xl px-6 py-24 lg:px-10"><div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]"><div><p className="font-mono text-xs uppercase tracking-[.2em] text-[#8fa800]">FAQ</p><h2 className="mt-4 text-4xl font-semibold tracking-[-.04em] sm:text-5xl">Les questions fréquentes.</h2></div><div className="divide-y divide-[#dfe4d8] border-y border-[#dfe4d8]">{faqs.map(([question, answer]) => <details key={question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold marker:content-none"><span>{question}</span><span className="font-mono text-xl text-[#8fa800] group-open:rotate-45">+</span></summary><p className="max-w-2xl pt-4 text-sm leading-relaxed text-[#61705d]">{answer}</p></details>)}</div></div></section>
 
-      <section className="border-y border-[#dfe4d8] bg-white/55"><div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-10"><p className="font-mono text-xs uppercase tracking-[.16em] text-[#61705d]">Retrouvez-moi aussi sur</p><div className="flex flex-wrap gap-3"><a href="#" className="rounded-full border border-[#cfd8c8] px-4 py-2 text-sm">Malt</a><a href="#" className="rounded-full border border-[#cfd8c8] px-4 py-2 text-sm">Codeur.com</a><a href="https://github.com/Nassim84" className="rounded-full border border-[#cfd8c8] px-4 py-2 text-sm">GitHub</a><a href="#" className="rounded-full border border-[#cfd8c8] px-4 py-2 text-sm">LinkedIn</a></div></div></section>
-
       <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-10"><div className="grid gap-10 rounded-[2rem] bg-[#d7f36b] p-8 sm:p-12 lg:grid-cols-[.9fr_1.1fr] lg:p-16"><div><p className="font-mono text-xs uppercase tracking-[.2em] text-[#617500]">Un projet en tête ?</p><h2 className="mt-4 max-w-xl text-5xl font-semibold leading-none tracking-[-.06em] sm:text-7xl">Faisons quelque chose d&apos;utile.</h2><p className="mt-6 max-w-lg leading-relaxed text-[#4f5d2a]">Expliquez-moi votre besoin en quelques lignes. Je vous réponds personnellement avec une première piste et les prochaines étapes.</p><a href="mailto:belalianassim@gmail.com" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold underline"><Mail className="size-4" />belalianassim@gmail.com</a></div><form onSubmit={handleSubmit} className="rounded-3xl bg-[#f7f7f2] p-6 sm:p-8"><div className="grid gap-5 sm:grid-cols-2"><label className="text-sm font-semibold">Nom<input name="name" required className="mt-2 w-full rounded-xl border border-[#cfd8c8] bg-white px-4 py-3 font-normal outline-none focus:ring-2 focus:ring-[#8fa800]" /></label><label className="text-sm font-semibold">Email<input name="email" type="email" required className="mt-2 w-full rounded-xl border border-[#cfd8c8] bg-white px-4 py-3 font-normal outline-none focus:ring-2 focus:ring-[#8fa800]" /></label></div><label className="mt-5 block text-sm font-semibold">Type de projet<select name="project" required defaultValue="" className="mt-2 w-full rounded-xl border border-[#cfd8c8] bg-white px-4 py-3 font-normal outline-none focus:ring-2 focus:ring-[#8fa800]"><option value="" disabled>Choisir une option</option><option>Site vitrine</option><option>Application métier</option><option>Refonte ou maintenance</option><option>Autre besoin</option></select></label><label className="mt-5 block text-sm font-semibold">Message<textarea name="message" required rows={5} className="mt-2 w-full resize-none rounded-xl border border-[#cfd8c8] bg-white px-4 py-3 font-normal outline-none focus:ring-2 focus:ring-[#8fa800]" /></label>{formError && <p className="mt-4 text-sm text-red-700" role="alert">{formError}</p>}{submitted && <p className="mt-4 text-sm font-semibold text-[#4f5d2a]" role="status">Merci, votre message est prêt. Écrivez-moi directement à belalianassim@gmail.com pour finaliser l&apos;envoi.</p>}<button type="submit" className="mt-6 inline-flex items-center rounded-full bg-[#17211c] px-6 py-4 text-sm font-semibold text-white"><Send className="mr-2 size-4" />Envoyer</button></form></div></section>
 
-      <footer className="mx-auto flex max-w-7xl flex-col gap-5 border-t border-[#dfe4d8] px-6 py-8 text-sm text-[#61705d] sm:flex-row sm:items-center sm:justify-between lg:px-10"><p>© 2026 Nassim Belalia — Développeur Full Stack</p><div className="flex flex-wrap items-center gap-4"><a href="https://github.com/Nassim84" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[#17211c]"><GitBranch className="size-5" aria-hidden="true" />GitHub</a><a href="#" className="inline-flex items-center gap-2 hover:text-[#17211c]"><BriefcaseBusiness className="size-5" aria-hidden="true" />LinkedIn</a><a href="#" className="font-mono text-xs hover:text-[#17211c]">Télécharger mon CV</a></div></footer>
+      <footer className="bg-[#17211c] text-[#f7f7f2]">
+        <div className="mx-auto max-w-7xl px-6 pb-10 pt-20 lg:px-10">
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
+            <div>
+              <a href="#top" className="flex items-center gap-3 font-mono text-sm font-bold tracking-tight"><span className="flex size-9 items-center justify-center rounded-full bg-[#d7f36b] text-[#17211c]">NB</span><span>Nassim Belalia<span className="text-white/40">.dev</span></span></a>
+              <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">Développeur full stack freelance à Avignon. Des produits web solides pour les indépendants et petites entreprises.</p>
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 font-mono text-xs text-white/70"><span className="size-2 rounded-full bg-[#a8c900] shadow-[0_0_0_4px_rgba(168,201,0,.2)]" />Disponible pour de nouveaux projets</div>
+            </div>
+
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[.2em] text-[#d7f36b]">Navigation</p>
+              <ul className="mt-6 space-y-3 text-sm text-white/70">{footerLinks.map(([label, href]) => <li key={href}><a href={href} className="transition-colors hover:text-white">{label}</a></li>)}</ul>
+            </div>
+
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[.2em] text-[#d7f36b]">Retrouvez-moi</p>
+              <ul className="mt-6 space-y-3 text-sm text-white/70">{socials.map((social) => <li key={social.label}><a href={social.href} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-1.5 transition-colors hover:text-white">{social.label}<ArrowUpRight className="size-3.5 text-white/40 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#d7f36b]" aria-hidden="true" /></a></li>)}</ul>
+            </div>
+
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[.2em] text-[#d7f36b]">Contact</p>
+              <ul className="mt-6 space-y-3 text-sm text-white/70">
+                <li><a href="mailto:belalianassim@gmail.com" className="inline-flex items-center gap-2 transition-colors hover:text-white"><Mail className="size-4 text-white/40" aria-hidden="true" />belalianassim@gmail.com</a></li>
+                <li className="flex items-center gap-2"><MapPin className="size-4 text-white/40" aria-hidden="true" />Avignon · Vaucluse</li>
+                <li className="flex items-center gap-2"><Clock className="size-4 text-white/40" aria-hidden="true" />Réponse sous 48h</li>
+                <li><a href="#" className="inline-flex items-center gap-2 transition-colors hover:text-white"><FileText className="size-4 text-white/40" aria-hidden="true" />Télécharger mon CV</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-16 flex flex-col gap-4 border-t border-white/15 pt-8 font-mono text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} Nassim Belalia — Développeur Full Stack</p>
+            <a href="#top" className="inline-flex items-center gap-2 transition-colors hover:text-[#d7f36b]">Retour en haut <ArrowUp className="size-3.5" aria-hidden="true" /></a>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
