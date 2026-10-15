@@ -23,6 +23,7 @@ export default function PolitiqueConfidentialitePage() {
           <li>votre nom ;</li>
           <li>votre adresse email ;</li>
           <li>le type de projet ;</li>
+          <li>le budget envisagé (facultatif) ;</li>
           <li>le contenu de votre message.</li>
         </ul>
         <p>Aucun compte utilisateur n&apos;est créé et aucune donnée n&apos;est collectée à votre insu.</p>
