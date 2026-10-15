@@ -23,6 +23,7 @@ export default function MentionsLegalesPage() {
           <li><strong>Siège :</strong> Avignon (84000), France</li>
           <li><strong>Téléphone :</strong> <a href="tel:+33767972307">07 67 97 23 07</a></li>
           <li><strong>Email :</strong> <a href="mailto:belalianassim@gmail.com">belalianassim@gmail.com</a></li>
+          <li><strong>WhatsApp :</strong> <a href="https://wa.me/33767972307" target="_blank" rel="noreferrer">07 67 97 23 07</a></li>
           <li><strong>N° TVA intracommunautaire :</strong> FR05109037051</li>
           <li><strong>TVA :</strong> TVA non applicable, art. 293 B du CGI</li>
         </ul>

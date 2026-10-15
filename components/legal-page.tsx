@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { Logo } from '@/components/logo'
 import { SiteFooter } from '@/components/site-footer'
 
 type LegalPageProps = {
@@ -14,7 +15,7 @@ export function LegalPage({ eyebrow, title, updatedAt, children }: LegalPageProp
     <main id="top" className="min-h-screen bg-[#f7f7f2] text-[#17211c] selection:bg-[#d7f36b] selection:text-[#17211c]">
       <header className="mx-auto max-w-7xl px-6 py-6 lg:px-10">
         <nav className="flex items-center justify-between" aria-label="Navigation principale">
-          <Link href="/" className="flex items-center gap-3 font-mono text-sm font-bold tracking-tight"><span className="flex size-9 items-center justify-center rounded-full bg-[#17211c] text-[#d7f36b]">NB</span><span>Nassim Belalia<span className="text-[#91a08f]">.dev</span></span></Link>
+          <Logo />
           <Link href="/" className="inline-flex items-center gap-2 rounded-full border border-[#cfd8c8] px-5 py-3 text-sm font-semibold"><ArrowLeft className="size-4" aria-hidden="true" />Retour à l&apos;accueil</Link>
         </nav>
       </header>
