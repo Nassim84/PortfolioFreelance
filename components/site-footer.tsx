@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowUp, ArrowUpRight, Clock, FileText, Mail, MapPin, MessageCircle } from 'lucide-react'
+import { ArrowUp, ArrowUpRight, Clock, Mail, MapPin, MessageCircle } from 'lucide-react'
 import { Logo } from '@/components/logo'
 import { legalLinks, navLinks, site, socials } from '@/lib/site'
 
@@ -58,12 +58,6 @@ export function SiteFooter() {
             <li className="flex items-center gap-2">
               <Clock className="size-4 text-white/40" aria-hidden="true" />
               Réponse sous 48h
-            </li>
-            <li>
-              <a href="#" className="inline-flex items-center gap-2 transition-colors hover:text-white">
-                <FileText className="size-4 text-white/40" aria-hidden="true" />
-                Télécharger mon CV
-              </a>
             </li>
           </FooterColumn>
         </div>
