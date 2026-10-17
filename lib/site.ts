@@ -6,12 +6,13 @@ export const site = {
   title: 'Nassim Belalia — Développeur Full Stack freelance à Avignon',
   description: 'Développeur full stack freelance à Avignon (Vaucluse) : création de sites vitrines, applications web sur mesure, refonte et maintenance pour indépendants, TPE et collectivités. Devis gratuit.',
   malt: 'https://www.malt.fr/profile/nassimbelalia',
+  linkedin: 'https://www.linkedin.com/in/nassim-belalia/',
   email: 'contact@nbfullstack.fr',
   phone: '07 67 97 23 07',
   phoneHref: 'tel:+33767972307',
   whatsappHref: 'https://wa.me/33767972307',
   github: 'https://github.com/Nassim84',
-  location: 'Avignon · Vaucluse',
+  location: 'Avignon · Aix-en-Provence',
 }
 
 export const navLinks = [
@@ -23,9 +24,8 @@ export const navLinks = [
 
 export const socials = [
   { label: 'Malt', href: site.malt },
-  { label: 'Codeur.com', href: '#' },
   { label: 'GitHub', href: site.github },
-  { label: 'LinkedIn', href: '#' },
+  { label: 'LinkedIn', href: site.linkedin },
 ]
 
 export const legalLinks = [

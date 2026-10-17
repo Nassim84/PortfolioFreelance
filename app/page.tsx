@@ -39,7 +39,7 @@ const jsonLd = {
       knowsAbout: skills,
       knowsLanguage: ['fr', 'en', 'es', 'ar'],
       worksFor: { '@id': `${site.url}/#business` },
-      sameAs: [site.github, site.malt],
+      sameAs: [site.github, site.malt, site.linkedin],
     },
     {
       '@type': 'ProfessionalService',
@@ -59,8 +59,8 @@ const jsonLd = {
         addressRegion: 'Provence-Alpes-Côte d’Azur',
         addressCountry: 'FR',
       },
-      areaServed: ['Avignon', 'Vaucluse', 'Gard', 'Bouches-du-Rhône', 'France'].map((name) => ({ '@type': 'Place', name })),
-      sameAs: [site.github, site.malt],
+      areaServed: ['Avignon', 'Aix-en-Provence', 'Marseille', 'Nîmes', 'Vaucluse', 'Bouches-du-Rhône', 'Gard', 'France'].map((name) => ({ '@type': 'Place', name })),
+      sameAs: [site.github, site.malt, site.linkedin],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Services de développement web',

@@ -79,13 +79,42 @@ export const steps = [
 export const skills = ['React', 'Next.js', 'TypeScript', 'Symfony', 'ASP.NET / C#', 'Node.js', 'Docker', 'CI/CD']
 
 export const faqs = [
-  { question: 'Quels types de projets acceptes-tu ?', answer: 'Sites vitrines, applications métier, refontes et missions de maintenance pour indépendants et petites entreprises.' },
-  { question: 'Quels sont tes délais habituels ?', answer: 'Ils dépendent du périmètre. Après un premier échange, je vous propose un planning réaliste et détaillé.' },
-  { question: 'Comment fonctionne la tarification ?', answer: 'Devis au forfait ou TJM selon le projet. Le devis est gratuit et sans engagement.' },
-  { question: 'Comment se passe le paiement ?', answer: 'Un acompte puis le solde à la livraison, ou via la plateforme Malt/Codeur selon le projet.' },
-  { question: 'Que se passe-t-il après la livraison ?', answer: 'Une période de correction est prévue. Une maintenance peut aussi être mise en place si besoin.' },
-  { question: 'Peux-tu reprendre un projet existant ?', answer: 'Oui. Je commence par un audit rapide pour comprendre la base et prioriser les améliorations.' },
-  { question: 'Travailles-tu à distance ?', answer: 'Oui, je travaille à distance avec des points réguliers et des échanges simples.' },
+  {
+    question: 'Quels types de projets acceptez-vous ?',
+    answer: 'Sites vitrines, applications métier, refontes et maintenance, pour des indépendants, des TPE, des associations et des collectivités.',
+  },
+  {
+    question: 'Combien coûte un site vitrine ?',
+    answer: 'Comptez à partir de 1 200 € pour un site vitrine de quelques pages, adapté au mobile et optimisé pour Google. La plupart des projets se situent entre 1 200 € et 3 000 € selon le nombre de pages et les fonctionnalités (formulaire de devis, blog, multilingue…). Le devis est gratuit et sans engagement.',
+  },
+  {
+    question: 'Et pour une application métier ou un outil sur mesure ?',
+    answer: 'Le prix dépend du périmètre : comptez généralement à partir de 4 000 €. Après un premier échange, je vous propose un devis au forfait détaillé, ou une facturation au temps passé (350 € par jour) pour les missions longues.',
+  },
+  {
+    question: 'Combien de temps faut-il pour créer un site ?',
+    answer: 'En moyenne 2 à 4 semaines pour un site vitrine, et 1 à 3 mois pour une application métier. Le planning exact est fixé dans le devis, avec des points réguliers pour suivre l’avancement.',
+  },
+  {
+    question: 'Travaillez-vous uniquement à Avignon ?',
+    answer: 'Non. Je suis basé entre Avignon et Aix-en-Provence et je travaille avec des clients partout en France, à distance. Je me déplace aussi volontiers dans le Vaucluse, les Bouches-du-Rhône et le Gard (Avignon, Aix-en-Provence, Marseille, Nîmes…).',
+  },
+  {
+    question: 'Mon site sera-t-il bien référencé sur Google ?',
+    answer: 'Chaque site est livré avec les bases d’un bon référencement : pages rapides, adaptées au mobile, balises optimisées, sitemap et données structurées. Pour un commerce local, je vous accompagne aussi sur votre fiche Google Business Profile.',
+  },
+  {
+    question: 'Comment se passe le paiement ?',
+    answer: 'Un acompte de 30 % au démarrage, puis le solde à la livraison. Pour les projets plus longs, le paiement peut être échelonné par étapes. Il est aussi possible de passer par Malt.',
+  },
+  {
+    question: 'Que se passe-t-il après la livraison ?',
+    answer: 'Une période de corrections est incluse. Ensuite, je peux assurer la maintenance de votre site (mises à jour, sauvegardes, petites évolutions) à partir de 50 € par mois, sans engagement.',
+  },
+  {
+    question: 'Pouvez-vous reprendre un projet existant ?',
+    answer: 'Oui. Je commence par un audit rapide pour comprendre l’existant et prioriser les améliorations, que le site soit en React, Next.js, Symfony ou ASP.NET.',
+  },
 ]
 
 export const projectTypes = ['Site vitrine', 'Application métier', 'Refonte ou maintenance', 'Autre besoin']
