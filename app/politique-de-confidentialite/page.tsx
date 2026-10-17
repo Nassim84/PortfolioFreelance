@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { LegalPage, LegalSection } from '@/components/legal-page'
+import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Politique de confidentialité',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function PolitiqueConfidentialitePage() {
   return (
-    <LegalPage eyebrow="Vos données" title="Politique de confidentialité" updatedAt="15 octobre 2026">
+    <LegalPage eyebrow="Vos données" title="Politique de confidentialité" updatedAt="17 octobre 2026">
       <p className="leading-relaxed text-mute">Cette page explique quelles données sont collectées sur ce site, pourquoi, et comment exercer vos droits, conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.</p>
 
       <LegalSection title="Responsable du traitement">
-        <p>Nassim Belalia, développeur full stack freelance, joignable à <a href="mailto:belalianassim@gmail.com">belalianassim@gmail.com</a>. Les coordonnées complètes figurent dans les <Link href="/mentions-legales">mentions légales</Link>.</p>
+        <p>Nassim Belalia, développeur full stack freelance, joignable à <a href={`mailto:${site.email}`}>{site.email}</a>. Les coordonnées complètes figurent dans les <Link href="/mentions-legales">mentions légales</Link>.</p>
       </LegalSection>
 
       <LegalSection title="Données collectées">
@@ -40,7 +41,7 @@ export default function PolitiqueConfidentialitePage() {
         <ul>
           <li><strong>Netlify, Inc.</strong> : hébergement du site ;</li>
           <li><strong>Resend</strong> : acheminement des messages envoyés via le formulaire ;</li>
-          <li><strong>Google (Gmail)</strong> : réception et stockage des emails.</li>
+          <li><strong>OVHcloud</strong> : hébergement de la messagerie (serveurs en France).</li>
         </ul>
         <p>Ces prestataires peuvent traiter des données aux États-Unis. Ces transferts sont encadrés par des garanties appropriées (cadre de protection des données UE–États-Unis et/ou clauses contractuelles types de la Commission européenne).</p>
       </LegalSection>
@@ -54,7 +55,7 @@ export default function PolitiqueConfidentialitePage() {
       </LegalSection>
 
       <LegalSection title="Vos droits">
-        <p>Vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement, de limitation, d&apos;opposition et de portabilité sur vos données. Pour les exercer, écrivez à <a href="mailto:belalianassim@gmail.com">belalianassim@gmail.com</a>. Une réponse vous sera apportée sous un mois maximum.</p>
+        <p>Vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement, de limitation, d&apos;opposition et de portabilité sur vos données. Pour les exercer, écrivez à <a href={`mailto:${site.email}`}>{site.email}</a>. Une réponse vous sera apportée sous un mois maximum.</p>
         <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL : <a href="https://www.cnil.fr" target="_blank" rel="noreferrer">cnil.fr</a>, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.</p>
       </LegalSection>
 
