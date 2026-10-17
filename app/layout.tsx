@@ -1,28 +1,57 @@
 import type { Metadata, Viewport } from 'next'
+import { site } from '@/lib/site'
 import './globals.css'
 
+// Favicon, icône Apple et image d'aperçu sont générés par app/icon.tsx, app/apple-icon.tsx et app/opengraph-image.tsx.
 export const metadata: Metadata = {
-  title: 'Nassim Belalia — Développeur Full Stack à Avignon',
-  description: 'Nassim Belalia, développeur full stack à Avignon. Sites vitrines, applications métier et maintenance web pour indépendants et petites entreprises.',
-  keywords: ['développeur full stack Avignon', 'freelance React Avignon', 'création site web Vaucluse', 'Next.js freelance', 'développeur Symfony Avignon'],
-  authors: [{ name: 'Nassim Belalia' }],
-  generator: 'Next.js',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  metadataBase: new URL(site.url),
+  title: {
+    default: site.title,
+    template: `%s — ${site.name}`,
+  },
+  description: site.description,
+  keywords: [
+    'développeur full stack Avignon',
+    'développeur web freelance Avignon',
+    'création site internet Avignon',
+    'création site vitrine Vaucluse',
+    'développeur Next.js freelance',
+    'développeur React freelance',
+    'développeur Symfony Avignon',
+    'développeur ASP.NET freelance',
+    'application web sur mesure',
+    'refonte site internet',
+    'freelance web Gard',
+    'développeur web Bouches-du-Rhône',
+  ],
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.businessName,
+  applicationName: site.businessName,
+  category: 'technology',
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    url: '/',
+    siteName: `${site.name} — ${site.businessName}`,
+    title: site.title,
+    description: site.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: site.title,
+    description: site.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 }
 

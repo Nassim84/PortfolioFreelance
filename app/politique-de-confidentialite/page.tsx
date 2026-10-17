@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { LegalPage, LegalSection } from '@/components/legal-page'
 
 export const metadata: Metadata = {
-  title: 'Politique de confidentialité — Nassim Belalia',
+  title: 'Politique de confidentialité',
   description: 'Comment les données personnelles sont collectées et utilisées sur le site de Nassim Belalia.',
-  robots: { index: false },
+  alternates: { canonical: '/politique-de-confidentialite' },
+  robots: { index: false, follow: true },
 }
 
 export default function PolitiqueConfidentialitePage() {

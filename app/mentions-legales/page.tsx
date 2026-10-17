@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { LegalPage, LegalSection } from '@/components/legal-page'
 
 export const metadata: Metadata = {
-  title: 'Mentions légales — Nassim Belalia',
+  title: 'Mentions légales',
   description: 'Mentions légales du site de Nassim Belalia, développeur full stack freelance à Avignon.',
-  robots: { index: false },
+  alternates: { canonical: '/mentions-legales' },
+  robots: { index: false, follow: true },
 }
 
 export default function MentionsLegalesPage() {
