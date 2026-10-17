@@ -2,7 +2,7 @@ import { skills } from '@/lib/content'
 
 export function Stack() {
   return (
-    <section className="bg-[#17211c] text-[#f7f7f2]">
+    <section className="bg-inverse text-[#f7f7f2] dark:border-y dark:border-line">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>

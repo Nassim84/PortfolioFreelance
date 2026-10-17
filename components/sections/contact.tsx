@@ -5,7 +5,7 @@ import { site } from '@/lib/site'
 export function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-      <div className="grid gap-10 rounded-[2rem] bg-[#d7f36b] p-8 sm:p-12 lg:grid-cols-[.9fr_1.1fr] lg:p-16">
+      <div className="grid gap-10 rounded-[2rem] bg-lime p-8 text-[#17211c] sm:p-12 lg:grid-cols-[.9fr_1.1fr] lg:p-16">
         <div>
           <p className="font-mono text-xs uppercase tracking-[.2em] text-[#617500]">Un projet en tête ?</p>
           <h2 className="mt-4 max-w-xl text-5xl font-semibold leading-none tracking-[-.06em] sm:text-7xl">

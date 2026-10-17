@@ -17,7 +17,7 @@ export const navLinks = [
 ]
 
 export const socials = [
-  { label: 'Malt', href: '#' },
+  { label: 'Malt', href: 'https://www.malt.fr/profile/nassimbelalia' },
   { label: 'Codeur.com', href: '#' },
   { label: 'GitHub', href: site.github },
   { label: 'LinkedIn', href: '#' },

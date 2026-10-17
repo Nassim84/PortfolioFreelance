@@ -21,7 +21,7 @@ const jsonLd = {
 
 export default function Page() {
   return (
-    <main id="top" className="min-h-screen overflow-hidden bg-[#f7f7f2] text-[#17211c] selection:bg-[#d7f36b] selection:text-[#17211c]">
+    <main id="top" className="min-h-screen overflow-hidden bg-paper text-ink selection:bg-[#d7f36b] selection:text-[#17211c]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader />

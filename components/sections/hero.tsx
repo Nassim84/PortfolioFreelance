@@ -5,29 +5,29 @@ export function Hero() {
   return (
     <section className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-16 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:px-10 lg:pb-32 lg:pt-24">
       <div>
-        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#d9dfce] bg-white/70 px-4 py-2 font-mono text-xs font-medium text-[#61705d]">
-          <span className="size-2 rounded-full bg-[#a8c900] shadow-[0_0_0_4px_#e8f1bc]" />
+        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-line-strong bg-surface/70 px-4 py-2 font-mono text-xs font-medium text-mute">
+          <span className="size-2 rounded-full bg-[#a8c900] shadow-[0_0_0_4px_rgba(168,201,0,.2)]" />
           Disponible pour de nouveaux projets
         </div>
 
         <h1 className="max-w-3xl text-5xl font-semibold leading-[.98] tracking-[-0.06em] sm:text-7xl lg:text-[clamp(4.5rem,7.6vw,7.5rem)]">
-          Des produits web <span className="text-[#8fa800]">solides</span>, pas juste du code.
+          Des produits web <span className="text-brand">solides</span>, pas juste du code.
         </h1>
 
-        <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#61705d]">
+        <p className="mt-8 max-w-xl text-lg leading-relaxed text-mute">
           Je suis Nassim, développeur full stack à Avignon. J’aide les indépendants et petites entreprises à transformer une idée ou un problème en outil web simple, rapide et utile.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center gap-4">
-          <a href="#realisations" className="rounded-full bg-[#17211c] px-6 py-4 text-sm font-semibold text-white">
+          <a href="#realisations" className="rounded-full bg-ink px-6 py-4 text-sm font-semibold text-paper">
             Voir mes réalisations <ArrowRight className="ml-2 inline size-4" />
           </a>
-          <a href="#contact" className="rounded-full border border-[#cfd8c8] px-6 py-4 text-sm font-semibold">
+          <a href="#contact" className="rounded-full border border-line-strong px-6 py-4 text-sm font-semibold">
             Me contacter
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-[#7a8876]">
+        <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-subtle">
           <span>{site.location}</span>
           <span>3 ans d&apos;expérience</span>
           <span>Réponse sous 48h</span>
@@ -44,7 +44,7 @@ function CodeCard() {
     <div className="relative min-h-[420px] lg:min-h-[560px]">
       <div className="absolute inset-6 rotate-3 rounded-[2rem] bg-[#d7f36b] lg:inset-10" />
 
-      <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-[#17211c] p-7 text-[#f7f7f2] shadow-2xl sm:p-10">
+      <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-inverse p-7 text-[#f7f7f2] shadow-2xl dark:ring-1 dark:ring-white/10 sm:p-10">
         <div className="flex items-center justify-between border-b border-white/15 pb-5 font-mono text-xs text-white/50">
           <span>portfolio.config.ts</span>
           <span>01 / 04</span>

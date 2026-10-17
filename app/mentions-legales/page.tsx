@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function MentionsLegalesPage() {
   return (
     <LegalPage eyebrow="Informations légales" title="Mentions légales" updatedAt="15 octobre 2026">
-      <p className="leading-relaxed text-[#61705d]">Conformément à l&apos;article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie numérique (LCEN), voici les informations relatives à l&apos;éditeur et à l&apos;hébergeur de ce site.</p>
+      <p className="leading-relaxed text-mute">Conformément à l&apos;article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie numérique (LCEN), voici les informations relatives à l&apos;éditeur et à l&apos;hébergeur de ce site.</p>
 
       <LegalSection title="Éditeur du site">
         <ul>

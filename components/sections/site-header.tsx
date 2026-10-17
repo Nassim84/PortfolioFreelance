@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { Logo } from '@/components/logo'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { navLinks } from '@/lib/site'
 
 export function SiteHeader() {
@@ -19,23 +20,27 @@ export function SiteHeader() {
           {sectionLinks.map((link) => (
             <a key={link.href} href={link.href}>{link.label}</a>
           ))}
-          <a href="#contact" className="rounded-full bg-[#17211c] px-5 py-3 text-[#f7f7f2]">
+          <ThemeToggle />
+          <a href="#contact" className="rounded-full bg-ink px-5 py-3 text-paper">
             Parlons de votre projet <ArrowRight className="ml-2 inline size-4" />
           </a>
         </div>
 
-        <button
-          className="rounded-full p-2 md:hidden"
-          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            className="rounded-full p-2"
+            aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </nav>
 
       {menuOpen && (
-        <div className="mt-4 flex flex-col gap-4 rounded-2xl border border-[#dfe4d8] bg-white p-5 md:hidden">
+        <div className="mt-4 flex flex-col gap-4 rounded-2xl border border-line bg-surface p-5 md:hidden">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} onClick={closeMenu}>{link.label}</a>
           ))}

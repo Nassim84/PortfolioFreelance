@@ -5,7 +5,7 @@ import { legalLinks, navLinks, site, socials } from '@/lib/site'
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#17211c] text-[#f7f7f2]">
+    <footer className="bg-inverse text-[#f7f7f2] dark:border-t dark:border-line">
       <div className="mx-auto max-w-7xl px-6 pb-10 pt-20 lg:px-10">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
           <div>

@@ -26,9 +26,15 @@ export const metadata: Metadata = {
   },
 }
 
+// Applique le thème (choix mémorisé, sinon réglage du système) avant l'affichage, pour éviter un flash.
+const themeScript = `try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d)}catch(e){}`
+
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#f7f7f2',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f7f7f2' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f1512' },
+  ],
 }
 
 export default function RootLayout({
@@ -37,7 +43,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="antialiased">
         {children}
       </body>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PolitiqueConfidentialitePage() {
   return (
     <LegalPage eyebrow="Vos données" title="Politique de confidentialité" updatedAt="15 octobre 2026">
-      <p className="leading-relaxed text-[#61705d]">Cette page explique quelles données sont collectées sur ce site, pourquoi, et comment exercer vos droits, conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.</p>
+      <p className="leading-relaxed text-mute">Cette page explique quelles données sont collectées sur ce site, pourquoi, et comment exercer vos droits, conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.</p>
 
       <LegalSection title="Responsable du traitement">
         <p>Nassim Belalia, développeur full stack freelance, joignable à <a href="mailto:belalianassim@gmail.com">belalianassim@gmail.com</a>. Les coordonnées complètes figurent dans les <Link href="/mentions-legales">mentions légales</Link>.</p>
